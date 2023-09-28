@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 
+  1.想想看怎麼從 0 到 100 隨機取一個整數? 
+  2.製作隨機數字 function，提供最小整數和最大整數，回傳一個區間內的隨機整數 -->
+
+  <script>
+    // 第1題
+    // ( 用 floor 沒有100 , 用 ceil 沒有0 )
+    let random = Math.round(Math.random() * 100)
+    console.log(random)
+
+    for (let i = 1; i <= 100; i++) {
+      let random = Math.round(Math.random() * 100)
+      console.log(random)
+    }
+
+    // 老師解法
+    for (let i = 1; i <= 100; i++) {
+      console.log(Math.round(Math.random() * 100))
+    }
+
+
+    // 第2題
+    const rand = (min, max) => {
+      //  150 ~ 200
+      // -150
+      //   0  ~ 50
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
+    for (let i = 0; i < 100; i++) {
+      console.log(rand(150, 200))
+    }
+
+  </script>
+
+
+</body>
+
+</html>
